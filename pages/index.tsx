@@ -10,7 +10,7 @@ const BASE_URL = 'http://localhost:3000/api'
 export default function Home() {
 	const router = useRouter()
 	const [idsDasQuestoes, setIdsDasQuestoes] = useState<number[]>([])
-	const [questao, setQuestao] = useState<QuestaoModel>()
+	const [questao, setQuestao] = useState<QuestaoModel | undefined>({} as QuestaoModel);
 	const [respostasCertas, setRespostasCertas] = useState<number>(0)
 
 	async function carregarIdsDasQuestoes(){
